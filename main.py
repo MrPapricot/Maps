@@ -3,6 +3,8 @@ import random
 import sys
 import pygame
 import requests
+from PIL import Image
+import io
 
 
 def createMap(x, y, z, l):
@@ -13,17 +15,16 @@ def createMap(x, y, z, l):
         print(slide)
         print("Http статус:", response.status_code, "(", response.reason, ")")
         sys.exit(1)
-    map_file = 'Data/maps/map.png'
-    with open(map_file, "wb") as file:
-        file.write(response.content)
-    return pygame.image.load('Data/maps/map.png')
+    pil_img = Image.open(io.BytesIO(response.content))
+    return pygame.image.fromstring(pil_img.tobytes(), pil_img.size, pil_img.mode)
 
 
 # Инициализируем pygame
 pygame.init()
 screen = pygame.display.set_mode((600, 450))
-size = 5
-x, y = 60, 60
+size = 10
+x, y = 60.2, 60
+delta = 0.821
 l = 'map'
 mapImage = createMap(x, y, size, l)
 pygame.display.flip()
@@ -38,10 +39,28 @@ while run:
             if event.key == pygame.K_PAGEUP:
                 size += 1
                 size %= 18
+                delta /= 2
                 mapImage = createMap(x, y, size, l)
             if event.key == pygame.K_PAGEDOWN:
                 size -= 1
                 size %= 18
+                delta *= 2
+                mapImage = createMap(x, y, size, l)
+            if event.key == pygame.K_UP:
+                if -90 < y + delta < 90:
+                    y += delta
+                mapImage = createMap(x, y, size, l)
+            if event.key == pygame.K_DOWN:
+                if -90 < y - delta < 90:
+                    y -= delta
+                mapImage = createMap(x, y, size, l)
+            if event.key == pygame.K_RIGHT:
+                if -180 < x + delta < 180:
+                    x += delta
+                mapImage = createMap(x, y, size, l)
+            if event.key == pygame.K_LEFT:
+                if -180 < x - delta < 180:
+                    x -= delta
                 mapImage = createMap(x, y, size, l)
     pygame.display.flip()
 pygame.quit()
