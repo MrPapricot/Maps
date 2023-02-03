@@ -14,8 +14,6 @@ class MyWidget(QMainWindow):
         self.pushButton_2.clicked.connect(self.type_map)
         self.pushButton_3.clicked.connect(self.type_map)
         self.pushButton_4.clicked.connect(self.type_map)
-
-
         self.size = size
         self.x, self.y = x, y
         self.delta = delta
@@ -26,15 +24,26 @@ class MyWidget(QMainWindow):
         self.label.setPixmap(QPixmap(qtfunc.createMap(self.x, self.y, self.size, self.mod)))
 
     def keyPressEvent(self, event):
-        #тут цифры из-за того, что пайкуте считает QT.key_pageup другой кнопкой
-        if event.key() == 16777235:
+        if event.key() == Qt.Key_PageUp:
             self.size += 1
             self.size %= 18
             self.delta /= 2
-        elif event.key() == 16777237:
+        elif event.key() == Qt.Key_PageDown:
             self.size -= 1
             self.size %= 18
             self.delta *= 2
+        elif event.key() == Qt.Key_Up:
+            if -90 < self.y + self.delta < 90:
+                self.y += self.delta
+        elif event.key() == Qt.Key_Down:
+            if -90 < self.y - self.delta < 90:
+                self.y -= self.delta
+        elif event.key() == Qt.Key_Right:
+            if -180 < self.x + self.delta < 180:
+                self.x += self.delta
+        elif event.key() == Qt.Key_Left:
+            if -180 < self.x - self.delta < 180:
+                self.x -= self.delta
         self.get_zapros()
 
     def type_map(self):
@@ -47,8 +56,6 @@ class MyWidget(QMainWindow):
         n = bt.text()
         self.mod = dict[n]
         self.get_zapros()
-
-
 
 
 if __name__ == '__main__':
