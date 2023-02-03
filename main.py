@@ -1,20 +1,23 @@
 import os
 import random
 import sys
-
 import pygame
 import requests
 
-slide = "http://static-maps.yandex.ru/1.x/?ll=80.137117,68.470624&z=3&l=sat"
-response = requests.get(slide)
-if not response:
-    print("Ошибка выполнения запроса:")
-    print(slide)
-    print("Http статус:", response.status_code, "(", response.reason, ")")
-    sys.exit(1)
-map_file = 'Data/maps/map.png'
-with open(map_file, "wb") as file:
-    file.write(response.content)
+
+def createMap(x, y, z):
+    slide = f"http://static-maps.yandex.ru/1.x/?ll={x},{y}&z={z}&l=map"
+    response = requests.get(slide)
+    if not response:
+        print("Ошибка выполнения запроса:")
+        print(slide)
+        print("Http статус:", response.status_code, "(", response.reason, ")")
+        sys.exit(1)
+    map_file = 'Data/maps/map.png'
+    with open(map_file, "wb") as file:
+        file.write(response.content)
+    return pygame.image.load('Data/maps/map.png')
+
 
 # Инициализируем pygame
 pygame.init()
@@ -23,7 +26,7 @@ screen = pygame.display.set_mode((600, 450))
 ind = 0
 # Переключаем экран и ждем закрытия окна.
 names = []
-mapImage = pygame.image.load('Data/maps/map.png')
+mapImage = createMap(60, 60, 5)
 pygame.display.flip()
 run = True
 while run:
