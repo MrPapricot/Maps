@@ -22,11 +22,10 @@ def createMap(x, y, z, l):
 # Инициализируем pygame
 pygame.init()
 screen = pygame.display.set_mode((600, 450))
-# Рисуем картинку, загружаемую из только что созданного файла.
-ind = 0
-# Переключаем экран и ждем закрытия окна.
-names = []
-mapImage = createMap(60, 60, 5, 'map')
+size = 5
+x, y = 60, 60
+l = 'map'
+mapImage = createMap(x, y, size, l)
 pygame.display.flip()
 run = True
 while run:
@@ -35,6 +34,15 @@ while run:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_PAGEUP:
+                size += 1
+                size %= 18
+                mapImage = createMap(x, y, size, l)
+            if event.key == pygame.K_PAGEDOWN:
+                size -= 1
+                size %= 18
+                mapImage = createMap(x, y, size, l)
     pygame.display.flip()
 pygame.quit()
 os.remove('Data/maps/map.png')
