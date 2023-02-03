@@ -3,8 +3,6 @@ import random
 import sys
 import pygame
 import requests
-from PIL import Image
-import io
 
 
 def createMap(x, y, z, l):
@@ -15,8 +13,10 @@ def createMap(x, y, z, l):
         print(slide)
         print("Http статус:", response.status_code, "(", response.reason, ")")
         sys.exit(1)
-    pil_img = Image.open(io.BytesIO(response.content))
-    return pygame.image.fromstring(pil_img.tobytes(), pil_img.size, pil_img.mode)
+    map_file = 'Data/maps/map.png'
+    with open(map_file, "wb") as file:
+        file.write(response.content)
+    return pygame.image.load('Data/maps/map.png')
 
 
 # Инициализируем pygame
