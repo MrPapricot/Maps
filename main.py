@@ -5,8 +5,8 @@ import pygame
 import requests
 
 
-def createMap(x, y, z):
-    slide = f"http://static-maps.yandex.ru/1.x/?ll={x},{y}&z={z}&l=map"
+def createMap(x, y, z, l):
+    slide = f"http://static-maps.yandex.ru/1.x/?ll={x},{y}&z={z}&l={l}"
     response = requests.get(slide)
     if not response:
         print("Ошибка выполнения запроса:")
