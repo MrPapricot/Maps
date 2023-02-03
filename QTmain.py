@@ -4,6 +4,7 @@ import sys
 from PyQt5 import uic  # Импортируем uic
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.QtGui import QPixmap
+from PyQt5.QtCore import Qt
 
 
 class MyWidget(QMainWindow):
@@ -23,6 +24,18 @@ class MyWidget(QMainWindow):
 
     def get_zapros(self):
         self.label.setPixmap(QPixmap(qtfunc.createMap(self.x, self.y, self.size, self.mod)))
+
+    def keyPressEvent(self, event):
+        #тут цифры из-за того, что пайкуте считает QT.key_pageup другой кнопкой
+        if event.key() == 16777235:
+            self.size += 1
+            self.size %= 18
+            self.delta /= 2
+        elif event.key() == 16777237:
+            self.size -= 1
+            self.size %= 18
+            self.delta *= 2
+        self.get_zapros()
 
     def type_map(self):
         bt = self.sender()
