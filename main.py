@@ -26,7 +26,7 @@ screen = pygame.display.set_mode((600, 450))
 ind = 0
 # Переключаем экран и ждем закрытия окна.
 names = []
-mapImage = createMap(60, 60, 5)
+mapImage = createMap(60, 60, 5, 'map')
 pygame.display.flip()
 run = True
 while run:
