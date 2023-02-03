@@ -40,9 +40,6 @@ while run:
     # screen.fill(pygame.Color('black'))
     screen.blit(slides[ind], (0, 0))
     for event in pygame.event.get():
-        if event.type == pygame.KEYDOWN or event.type == pygame.MOUSEBUTTONDOWN:
-            ind += 1
-            ind %= len(slides)
         if event.type == pygame.QUIT:
             run = False
     pygame.display.flip()
