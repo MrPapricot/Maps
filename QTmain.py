@@ -11,6 +11,7 @@ class MyWidget(QMainWindow):
     def __init__(self, size=10, x=60, y=60, delta=0.821, mod='map'):
         super().__init__()
         uic.loadUi('qtinterface.ui', self)  # Загружаем дизайн
+        self.pushButton.clicked.connect(self.find_toponim)
         self.pushButton_2.clicked.connect(self.type_map)
         self.pushButton_3.clicked.connect(self.type_map)
         self.pushButton_4.clicked.connect(self.type_map)
@@ -19,6 +20,13 @@ class MyWidget(QMainWindow):
         self.delta = delta
         self.mod = mod
         self.get_zapros()
+
+    def find_toponim(self):
+        text = self.lineEdit.text()
+        a = qtfunc.find_toponim(text)
+        self.x = a[0]
+        self.y = a[1]
+
 
     def get_zapros(self):
         self.label.setPixmap(QPixmap(qtfunc.createMap(self.x, self.y, self.size, self.mod)))
