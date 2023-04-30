@@ -15,7 +15,9 @@ class MyWidget(QMainWindow):
         self.pushButton_2.clicked.connect(self.type_map)
         self.pushButton_3.clicked.connect(self.type_map)
         self.pushButton_4.clicked.connect(self.type_map)
+        print(1)
         self.size = size
+        self.marker = False
         self.x, self.y = x, y
         self.delta = delta
         self.mod = mod
@@ -24,14 +26,19 @@ class MyWidget(QMainWindow):
     def find_toponim(self):
         text = self.lineEdit.text()
         a = qtfunc.find_toponim(text)
-        self.x = a[0]
-        self.y = a[1]
-
+        self.textBrowser.setText(a[1])
+        a = a[0].split()
+        self.x = float(a[0])
+        self.y = float(a[1])
+        self.marker = True
+        self.get_zapros()
 
     def get_zapros(self):
+        print((self.x, self.y, self.size, self.mod))
         self.label.setPixmap(QPixmap(qtfunc.createMap(self.x, self.y, self.size, self.mod)))
 
     def keyPressEvent(self, event):
+        print(event.key())
         if event.key() == Qt.Key_PageUp:
             self.size += 1
             self.size %= 18
@@ -40,16 +47,17 @@ class MyWidget(QMainWindow):
             self.size -= 1
             self.size %= 18
             self.delta *= 2
-        elif event.key() == Qt.Key_Up:
+        elif event.key() == Qt.Key_Up or event.key() == Qt.Key_W:
             if -90 < self.y + self.delta < 90:
                 self.y += self.delta
-        elif event.key() == Qt.Key_Down:
+        elif event.key() == Qt.Key_Down or event.key() == Qt.Key_S:
             if -90 < self.y - self.delta < 90:
+                print(123)
                 self.y -= self.delta
-        elif event.key() == Qt.Key_Right:
+        elif event.key() == Qt.Key_Right or event.key() == Qt.Key_D:
             if -180 < self.x + self.delta < 180:
                 self.x += self.delta
-        elif event.key() == Qt.Key_Left:
+        elif event.key() == Qt.Key_Left or event.key() == Qt.Key_A:
             if -180 < self.x - self.delta < 180:
                 self.x -= self.delta
         self.get_zapros()
