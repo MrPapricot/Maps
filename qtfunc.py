@@ -65,8 +65,11 @@ def find_toponim(adress):
         print("Http статус:", response.status_code, "(", response.reason, ")")
 
 
-def click_map(x, y, delta):
-    geocoder_request = f"http://geocode-maps.yandex.ru/1.x/?apikey=40d1649f-0493-4b70-98ba-98533de7710b&geocode={','.join([str(x), str(y)])}&spn={delta},{delta}&format=json"
+def click_map(x, y, delta, org):
+    if org:
+        geocoder_request = f"http://geocode-maps.yandex.ru/1.x/?apikey=40d1649f-0493-4b70-98ba-98533de7710b&type=biz&geocode={','.join([str(x), str(y)])}&spn=0.0005,0.0005&format=json"
+    else:
+        geocoder_request = f"http://geocode-maps.yandex.ru/1.x/?apikey=40d1649f-0493-4b70-98ba-98533de7710b&geocode={','.join([str(x), str(y)])}&spn={delta},{delta}&format=json"
 
     global pt, flag
     # Выполняем запрос.

@@ -44,7 +44,6 @@ class MyWidget(QMainWindow):
         self.get_zapros()
 
     def get_zapros(self):
-        print((self.x, self.y, self.size, self.mod))
         self.label.setPixmap(QPixmap(qtfunc.createMap(self.x, self.y, self.size, self.mod)))
 
     def keyPressEvent(self, event):
@@ -76,17 +75,25 @@ class MyWidget(QMainWindow):
         if event.button() == Qt.LeftButton:
             x, y = (event.x(), event.y())
             mx, my = self.label.width(), self.label.height()
-            print(((y - my // 2) / my) * self.delta)
             if y <= my:
                 x = self.x + (((x - mx // 2) / mx) * self.delta)
                 y = self.y - (((y - my // 2) / my) * self.delta / 3)
-                a = qtfunc.click_map(x, y, str(self.delta / 2))
+                a = qtfunc.click_map(x, y, str(self.delta / 2), False)
                 if a:
                     self.textBrowser.setText(a)
                 else:
                     self.textBrowser.setText('не удалось ничего найти')
         elif event.button() == Qt.RightButton:
-            print(event)
+            x, y = (event.x(), event.y())
+            mx, my = self.label.width(), self.label.height()
+            if y <= my:
+                x = self.x + (((x - mx // 2) / mx) * self.delta)
+                y = self.y - (((y - my // 2) / my) * self.delta / 3)
+                a = qtfunc.click_map(x, y, str(self.delta / 2), True)
+                if a:
+                    self.textBrowser.setText(a)
+                else:
+                    self.textBrowser.setText('не удалось ничего найти')
         self.get_zapros()
 
 
