@@ -19,7 +19,6 @@ class MyWidget(QMainWindow):
         self.pushButton_6.clicked.connect(self.switch)
         print(1)
         self.size = size
-        self.marker = False
         self.x, self.y = x, y
         self.delta = delta
         self.mod = mod
@@ -42,7 +41,6 @@ class MyWidget(QMainWindow):
         a = a[0].split()
         self.x = float(a[0])
         self.y = float(a[1])
-        self.marker = True
         self.get_zapros()
 
     def get_zapros(self):
@@ -73,6 +71,24 @@ class MyWidget(QMainWindow):
             if -180 < self.x - self.delta < 180:
                 self.x -= self.delta
         self.get_zapros()
+
+    def mousePressEvent(self, event):
+        if event.button() == Qt.LeftButton:
+            x, y = (event.x(), event.y())
+            mx, my = self.label.width(), self.label.height()
+            print(((y - my // 2) / my) * self.delta)
+            if y <= my:
+                x = self.x + (((x - mx // 2) / mx) * self.delta)
+                y = self.y - (((y - my // 2) / my) * self.delta / 3)
+                a = qtfunc.click_map(x, y, str(self.delta / 2))
+                if a:
+                    self.textBrowser.setText(a)
+                else:
+                    self.textBrowser.setText('не удалось ничего найти')
+        elif event.button() == Qt.RightButton:
+            print(event)
+        self.get_zapros()
+
 
     def type_map(self):
         bt = self.sender()
