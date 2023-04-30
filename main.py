@@ -25,8 +25,8 @@ screen = pygame.display.set_mode((600, 450))
 size = 10
 x, y = 60.2, 60
 delta = 0.821
-mode = 'map'
-mapImage = createMap(x, y, size, mode)
+l = 'map'
+mapImage = createMap(x, y, size, l)
 pygame.display.flip()
 run = True
 while run:
@@ -40,28 +40,28 @@ while run:
                 size += 1
                 size %= 18
                 delta /= 2
-                mapImage = createMap(x, y, size, mode)
+                mapImage = createMap(x, y, size, l)
             if event.key == pygame.K_PAGEDOWN:
                 size -= 1
                 size %= 18
                 delta *= 2
-                mapImage = createMap(x, y, size, mode)
+                mapImage = createMap(x, y, size, l)
             if event.key == pygame.K_UP:
                 if -90 < y + delta < 90:
                     y += delta
-                mapImage = createMap(x, y, size, mode)
+                mapImage = createMap(x, y, size, l)
             if event.key == pygame.K_DOWN:
                 if -90 < y - delta < 90:
                     y -= delta
-                mapImage = createMap(x, y, size, mode)
+                mapImage = createMap(x, y, size, l)
             if event.key == pygame.K_RIGHT:
                 if -180 < x + delta < 180:
                     x += delta
-                mapImage = createMap(x, y, size, mode)
+                mapImage = createMap(x, y, size, l)
             if event.key == pygame.K_LEFT:
                 if -180 < x - delta < 180:
                     x -= delta
-                mapImage = createMap(x, y, size, mode)
+                mapImage = createMap(x, y, size, l)
     pygame.display.flip()
 pygame.quit()
 os.remove('Data/maps/map.png')
