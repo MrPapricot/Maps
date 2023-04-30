@@ -3,15 +3,9 @@
     "GeoObjectCollection": {
       "metaDataProperty": {
         "GeocoderResponseMetaData": {
-          "boundedBy": {
-            "Envelope": {
-              "lowerCorner": "37.038186 55.312148",
-              "upperCorner": "38.2026 56.190802"
-            }
-          },
-          "request": "Москва",
+          "request": "приветная 3",
           "results": "10",
-          "found": "1"
+          "found": "10"
         }
       },
       "featureMember": [
@@ -19,12 +13,304 @@
           "GeoObject": {
             "metaDataProperty": {
               "GeocoderMetaData": {
-                "precision": "other",
-                "text": "Россия, Москва",
-                "kind": "province",
+                "precision": "exact",
+                "text": "Россия, Алтайский край, Барнаул, Приветная улица, 3",
+                "kind": "house",
                 "Address": {
                   "country_code": "RU",
-                  "formatted": "Россия, Москва",
+                  "formatted": "Россия, Алтайский край, Барнаул, Приветная улица, 3",
+                  "postal_code": "656064",
+                  "Components": [
+                    {
+                      "kind": "country",
+                      "name": "Россия"
+                    },
+                    {
+                      "kind": "province",
+                      "name": "Сибирский федеральный округ"
+                    },
+                    {
+                      "kind": "province",
+                      "name": "Алтайский край"
+                    },
+                    {
+                      "kind": "area",
+                      "name": "муниципальное образование Барнаул"
+                    },
+                    {
+                      "kind": "locality",
+                      "name": "Барнаул"
+                    },
+                    {
+                      "kind": "street",
+                      "name": "Приветная улица"
+                    },
+                    {
+                      "kind": "house",
+                      "name": "3"
+                    }
+                  ]
+                },
+                "AddressDetails": {
+                  "Country": {
+                    "AddressLine": "Россия, Алтайский край, Барнаул, Приветная улица, 3",
+                    "CountryNameCode": "RU",
+                    "CountryName": "Россия",
+                    "AdministrativeArea": {
+                      "AdministrativeAreaName": "Алтайский край",
+                      "SubAdministrativeArea": {
+                        "SubAdministrativeAreaName": "муниципальное образование Барнаул",
+                        "Locality": {
+                          "LocalityName": "Барнаул",
+                          "Thoroughfare": {
+                            "ThoroughfareName": "Приветная улица",
+                            "Premise": {
+                              "PremiseNumber": "3",
+                              "PostalCode": {
+                                "PostalCodeNumber": "656064"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "name": "Приветная улица, 3",
+            "description": "Барнаул, Алтайский край, Россия",
+            "boundedBy": {
+              "Envelope": {
+                "lowerCorner": "83.719104 53.330203",
+                "upperCorner": "83.727314 53.335118"
+              }
+            },
+            "Point": {
+              "pos": "83.723209 53.332661"
+            }
+          }
+        },
+        {
+          "GeoObject": {
+            "metaDataProperty": {
+              "GeocoderMetaData": {
+                "precision": "exact",
+                "text": "Украина, Киев, Приветная улица, 3",
+                "kind": "house",
+                "Address": {
+                  "country_code": "UA",
+                  "formatted": "Украина, Киев, Приветная улица, 3",
+                  "Components": [
+                    {
+                      "kind": "country",
+                      "name": "Украина"
+                    },
+                    {
+                      "kind": "province",
+                      "name": "Киев"
+                    },
+                    {
+                      "kind": "locality",
+                      "name": "Киев"
+                    },
+                    {
+                      "kind": "street",
+                      "name": "Приветная улица"
+                    },
+                    {
+                      "kind": "house",
+                      "name": "3"
+                    }
+                  ]
+                },
+                "AddressDetails": {
+                  "Country": {
+                    "AddressLine": "Украина, Киев, Приветная улица, 3",
+                    "CountryNameCode": "UA",
+                    "CountryName": "Украина",
+                    "AdministrativeArea": {
+                      "AdministrativeAreaName": "Киев",
+                      "Locality": {
+                        "LocalityName": "Киев",
+                        "Thoroughfare": {
+                          "ThoroughfareName": "Приветная улица",
+                          "Premise": {
+                            "PremiseNumber": "3"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "name": "Приветная улица, 3",
+            "description": "Киев, Украина",
+            "boundedBy": {
+              "Envelope": {
+                "lowerCorner": "30.492432 50.428727",
+                "upperCorner": "30.500643 50.433971"
+              }
+            },
+            "Point": {
+              "pos": "30.496537 50.431349"
+            }
+          }
+        },
+        {
+          "GeoObject": {
+            "metaDataProperty": {
+              "GeocoderMetaData": {
+                "precision": "exact",
+                "text": "Россия, Республика Крым, Симферополь, Приветная улица, 3",
+                "kind": "house",
+                "Address": {
+                  "country_code": "RU",
+                  "formatted": "Россия, Республика Крым, Симферополь, Приветная улица, 3",
+                  "Components": [
+                    {
+                      "kind": "country",
+                      "name": "Россия"
+                    },
+                    {
+                      "kind": "province",
+                      "name": "Южный федеральный округ"
+                    },
+                    {
+                      "kind": "province",
+                      "name": "Республика Крым"
+                    },
+                    {
+                      "kind": "area",
+                      "name": "городской округ Симферополь"
+                    },
+                    {
+                      "kind": "locality",
+                      "name": "Симферополь"
+                    },
+                    {
+                      "kind": "street",
+                      "name": "Приветная улица"
+                    },
+                    {
+                      "kind": "house",
+                      "name": "3"
+                    }
+                  ]
+                },
+                "AddressDetails": {
+                  "Country": {
+                    "AddressLine": "Россия, Республика Крым, Симферополь, Приветная улица, 3",
+                    "CountryNameCode": "RU",
+                    "CountryName": "Россия",
+                    "AdministrativeArea": {
+                      "AdministrativeAreaName": "Республика Крым",
+                      "SubAdministrativeArea": {
+                        "SubAdministrativeAreaName": "городской округ Симферополь",
+                        "Locality": {
+                          "LocalityName": "Симферополь",
+                          "Thoroughfare": {
+                            "ThoroughfareName": "Приветная улица",
+                            "Premise": {
+                              "PremiseNumber": "3"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "name": "Приветная улица, 3",
+            "description": "Симферополь, Республика Крым, Россия",
+            "boundedBy": {
+              "Envelope": {
+                "lowerCorner": "34.138855 44.98205",
+                "upperCorner": "34.147066 44.987877"
+              }
+            },
+            "Point": {
+              "pos": "34.142961 44.984964"
+            }
+          }
+        },
+        {
+          "GeoObject": {
+            "metaDataProperty": {
+              "GeocoderMetaData": {
+                "precision": "other",
+                "text": "Россия, Омский район, деревня Приветная",
+                "kind": "locality",
+                "Address": {
+                  "country_code": "RU",
+                  "formatted": "Россия, Омский район, деревня Приветная",
+                  "Components": [
+                    {
+                      "kind": "country",
+                      "name": "Россия"
+                    },
+                    {
+                      "kind": "province",
+                      "name": "Сибирский федеральный округ"
+                    },
+                    {
+                      "kind": "province",
+                      "name": "Омская область"
+                    },
+                    {
+                      "kind": "area",
+                      "name": "Омский район"
+                    },
+                    {
+                      "kind": "locality",
+                      "name": "деревня Приветная"
+                    }
+                  ]
+                },
+                "AddressDetails": {
+                  "Country": {
+                    "AddressLine": "Россия, Омский район, деревня Приветная",
+                    "CountryNameCode": "RU",
+                    "CountryName": "Россия",
+                    "AdministrativeArea": {
+                      "AdministrativeAreaName": "Омская область",
+                      "SubAdministrativeArea": {
+                        "SubAdministrativeAreaName": "Омский район",
+                        "Locality": {
+                          "LocalityName": "деревня Приветная"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "name": "деревня Приветная",
+            "description": "Омский район, Россия",
+            "boundedBy": {
+              "Envelope": {
+                "lowerCorner": "73.172532 54.946896",
+                "upperCorner": "73.202015 54.968334"
+              }
+            },
+            "Point": {
+              "pos": "73.185665 54.960328"
+            }
+          }
+        },
+        {
+          "GeoObject": {
+            "metaDataProperty": {
+              "GeocoderMetaData": {
+                "precision": "exact",
+                "text": "Россия, Ярославль, посёлок Кармановский, Приветная улица, 3",
+                "kind": "house",
+                "Address": {
+                  "country_code": "RU",
+                  "formatted": "Россия, Ярославль, посёлок Кармановский, Приветная улица, 3",
+                  "postal_code": "150025",
                   "Components": [
                     {
                       "kind": "country",
@@ -36,32 +322,456 @@
                     },
                     {
                       "kind": "province",
-                      "name": "Москва"
+                      "name": "Ярославская область"
+                    },
+                    {
+                      "kind": "area",
+                      "name": "городской округ Ярославль"
+                    },
+                    {
+                      "kind": "locality",
+                      "name": "Ярославль"
+                    },
+                    {
+                      "kind": "district",
+                      "name": "посёлок Кармановский"
+                    },
+                    {
+                      "kind": "street",
+                      "name": "Приветная улица"
+                    },
+                    {
+                      "kind": "house",
+                      "name": "3"
                     }
                   ]
                 },
                 "AddressDetails": {
                   "Country": {
-                    "AddressLine": "Россия, Москва",
+                    "AddressLine": "Россия, Ярославль, посёлок Кармановский, Приветная улица, 3",
                     "CountryNameCode": "RU",
                     "CountryName": "Россия",
                     "AdministrativeArea": {
-                      "AdministrativeAreaName": "Москва"
+                      "AdministrativeAreaName": "Ярославская область",
+                      "SubAdministrativeArea": {
+                        "SubAdministrativeAreaName": "городской округ Ярославль",
+                        "Locality": {
+                          "LocalityName": "Ярославль",
+                          "DependentLocality": {
+                            "DependentLocalityName": "посёлок Кармановский",
+                            "Thoroughfare": {
+                              "ThoroughfareName": "Приветная улица",
+                              "Premise": {
+                                "PremiseNumber": "3",
+                                "PostalCode": {
+                                  "PostalCodeNumber": "150025"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
                     }
                   }
                 }
               }
             },
-            "name": "Москва",
-            "description": "Россия",
+            "name": "Приветная улица, 3",
+            "description": "посёлок Кармановский, Ярославль, Россия",
             "boundedBy": {
               "Envelope": {
-                "lowerCorner": "36.803268 55.142226",
-                "upperCorner": "37.967799 56.021286"
+                "lowerCorner": "39.774517 57.641895",
+                "upperCorner": "39.782728 57.646298"
               }
             },
             "Point": {
-              "pos": "37.617698 55.755864"
+              "pos": "39.778622 57.644097"
+            }
+          }
+        },
+        {
+          "GeoObject": {
+            "metaDataProperty": {
+              "GeocoderMetaData": {
+                "precision": "exact",
+                "text": "Россия, Ставропольский край, село Красногвардейское, Приветная улица, 3",
+                "kind": "house",
+                "Address": {
+                  "country_code": "RU",
+                  "formatted": "Россия, Ставропольский край, село Красногвардейское, Приветная улица, 3",
+                  "Components": [
+                    {
+                      "kind": "country",
+                      "name": "Россия"
+                    },
+                    {
+                      "kind": "province",
+                      "name": "Северо-Кавказский федеральный округ"
+                    },
+                    {
+                      "kind": "province",
+                      "name": "Ставропольский край"
+                    },
+                    {
+                      "kind": "area",
+                      "name": "Красногвардейский муниципальный округ"
+                    },
+                    {
+                      "kind": "locality",
+                      "name": "село Красногвардейское"
+                    },
+                    {
+                      "kind": "street",
+                      "name": "Приветная улица"
+                    },
+                    {
+                      "kind": "house",
+                      "name": "3"
+                    }
+                  ]
+                },
+                "AddressDetails": {
+                  "Country": {
+                    "AddressLine": "Россия, Ставропольский край, село Красногвардейское, Приветная улица, 3",
+                    "CountryNameCode": "RU",
+                    "CountryName": "Россия",
+                    "AdministrativeArea": {
+                      "AdministrativeAreaName": "Ставропольский край",
+                      "SubAdministrativeArea": {
+                        "SubAdministrativeAreaName": "Красногвардейский муниципальный округ",
+                        "Locality": {
+                          "LocalityName": "село Красногвардейское",
+                          "Thoroughfare": {
+                            "ThoroughfareName": "Приветная улица",
+                            "Premise": {
+                              "PremiseNumber": "3"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "name": "Приветная улица, 3",
+            "description": "село Красногвардейское, Ставропольский край, Россия",
+            "boundedBy": {
+              "Envelope": {
+                "lowerCorner": "41.510709 45.828191",
+                "upperCorner": "41.51892 45.83393"
+              }
+            },
+            "Point": {
+              "pos": "41.514814 45.831061"
+            }
+          }
+        },
+        {
+          "GeoObject": {
+            "metaDataProperty": {
+              "GeocoderMetaData": {
+                "precision": "exact",
+                "text": "Украина, Николаев, Приветная улица, 3",
+                "kind": "house",
+                "Address": {
+                  "country_code": "UA",
+                  "formatted": "Украина, Николаев, Приветная улица, 3",
+                  "Components": [
+                    {
+                      "kind": "country",
+                      "name": "Украина"
+                    },
+                    {
+                      "kind": "province",
+                      "name": "Николаевская область"
+                    },
+                    {
+                      "kind": "area",
+                      "name": "Николаевский район"
+                    },
+                    {
+                      "kind": "area",
+                      "name": "Николаевская городская община"
+                    },
+                    {
+                      "kind": "locality",
+                      "name": "Николаев"
+                    },
+                    {
+                      "kind": "street",
+                      "name": "Приветная улица"
+                    },
+                    {
+                      "kind": "house",
+                      "name": "3"
+                    }
+                  ]
+                },
+                "AddressDetails": {
+                  "Country": {
+                    "AddressLine": "Украина, Николаев, Приветная улица, 3",
+                    "CountryNameCode": "UA",
+                    "CountryName": "Украина",
+                    "AdministrativeArea": {
+                      "AdministrativeAreaName": "Николаевская область",
+                      "SubAdministrativeArea": {
+                        "SubAdministrativeAreaName": "Николаевский район",
+                        "Locality": {
+                          "LocalityName": "Николаев",
+                          "Thoroughfare": {
+                            "ThoroughfareName": "Приветная улица",
+                            "Premise": {
+                              "PremiseNumber": "3"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "name": "Приветная улица, 3",
+            "description": "Николаев, Украина",
+            "boundedBy": {
+              "Envelope": {
+                "lowerCorner": "32.060783 46.971595",
+                "upperCorner": "32.068993 46.977215"
+              }
+            },
+            "Point": {
+              "pos": "32.064888 46.974405"
+            }
+          }
+        },
+        {
+          "GeoObject": {
+            "metaDataProperty": {
+              "GeocoderMetaData": {
+                "precision": "exact",
+                "text": "Украина, Ровно, Приветная улица, 3",
+                "kind": "house",
+                "Address": {
+                  "country_code": "UA",
+                  "formatted": "Украина, Ровно, Приветная улица, 3",
+                  "Components": [
+                    {
+                      "kind": "country",
+                      "name": "Украина"
+                    },
+                    {
+                      "kind": "province",
+                      "name": "Ровненская область"
+                    },
+                    {
+                      "kind": "area",
+                      "name": "Ровненский район"
+                    },
+                    {
+                      "kind": "area",
+                      "name": "Ровненская городская община"
+                    },
+                    {
+                      "kind": "locality",
+                      "name": "Ровно"
+                    },
+                    {
+                      "kind": "street",
+                      "name": "Приветная улица"
+                    },
+                    {
+                      "kind": "house",
+                      "name": "3"
+                    }
+                  ]
+                },
+                "AddressDetails": {
+                  "Country": {
+                    "AddressLine": "Украина, Ровно, Приветная улица, 3",
+                    "CountryNameCode": "UA",
+                    "CountryName": "Украина",
+                    "AdministrativeArea": {
+                      "AdministrativeAreaName": "Ровненская область",
+                      "SubAdministrativeArea": {
+                        "SubAdministrativeAreaName": "Ровненский район",
+                        "Locality": {
+                          "LocalityName": "Ровно",
+                          "Thoroughfare": {
+                            "ThoroughfareName": "Приветная улица",
+                            "Premise": {
+                              "PremiseNumber": "3"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "name": "Приветная улица, 3",
+            "description": "Ровно, Украина",
+            "boundedBy": {
+              "Envelope": {
+                "lowerCorner": "26.217772 50.613828",
+                "upperCorner": "26.225982 50.619052"
+              }
+            },
+            "Point": {
+              "pos": "26.221877 50.61644"
+            }
+          }
+        },
+        {
+          "GeoObject": {
+            "metaDataProperty": {
+              "GeocoderMetaData": {
+                "precision": "exact",
+                "text": "Украина, Черниговская область, Нежинский район, город Носовка, Приветная улица, 3",
+                "kind": "house",
+                "Address": {
+                  "country_code": "UA",
+                  "formatted": "Украина, Черниговская область, Нежинский район, город Носовка, Приветная улица, 3",
+                  "Components": [
+                    {
+                      "kind": "country",
+                      "name": "Украина"
+                    },
+                    {
+                      "kind": "province",
+                      "name": "Черниговская область"
+                    },
+                    {
+                      "kind": "area",
+                      "name": "Нежинский район"
+                    },
+                    {
+                      "kind": "locality",
+                      "name": "город Носовка"
+                    },
+                    {
+                      "kind": "street",
+                      "name": "Приветная улица"
+                    },
+                    {
+                      "kind": "house",
+                      "name": "3"
+                    }
+                  ]
+                },
+                "AddressDetails": {
+                  "Country": {
+                    "AddressLine": "Украина, Черниговская область, Нежинский район, город Носовка, Приветная улица, 3",
+                    "CountryNameCode": "UA",
+                    "CountryName": "Украина",
+                    "AdministrativeArea": {
+                      "AdministrativeAreaName": "Черниговская область",
+                      "SubAdministrativeArea": {
+                        "SubAdministrativeAreaName": "Нежинский район",
+                        "Locality": {
+                          "LocalityName": "город Носовка",
+                          "Thoroughfare": {
+                            "ThoroughfareName": "Приветная улица",
+                            "Premise": {
+                              "PremiseNumber": "3"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "name": "Приветная улица, 3",
+            "description": "город Носовка, Нежинский район, Черниговская область, Украина",
+            "boundedBy": {
+              "Envelope": {
+                "lowerCorner": "31.596641 50.882779",
+                "upperCorner": "31.604852 50.887973"
+              }
+            },
+            "Point": {
+              "pos": "31.600746 50.885376"
+            }
+          }
+        },
+        {
+          "GeoObject": {
+            "metaDataProperty": {
+              "GeocoderMetaData": {
+                "precision": "exact",
+                "text": "Украина, Волынская область, Луцк, Приветная улица, 3",
+                "kind": "house",
+                "Address": {
+                  "country_code": "UA",
+                  "formatted": "Украина, Волынская область, Луцк, Приветная улица, 3",
+                  "Components": [
+                    {
+                      "kind": "country",
+                      "name": "Украина"
+                    },
+                    {
+                      "kind": "province",
+                      "name": "Волынская область"
+                    },
+                    {
+                      "kind": "area",
+                      "name": "Луцкий район"
+                    },
+                    {
+                      "kind": "area",
+                      "name": "Луцкая городская община"
+                    },
+                    {
+                      "kind": "locality",
+                      "name": "Луцк"
+                    },
+                    {
+                      "kind": "street",
+                      "name": "Приветная улица"
+                    },
+                    {
+                      "kind": "house",
+                      "name": "3"
+                    }
+                  ]
+                },
+                "AddressDetails": {
+                  "Country": {
+                    "AddressLine": "Украина, Волынская область, Луцк, Приветная улица, 3",
+                    "CountryNameCode": "UA",
+                    "CountryName": "Украина",
+                    "AdministrativeArea": {
+                      "AdministrativeAreaName": "Волынская область",
+                      "SubAdministrativeArea": {
+                        "SubAdministrativeAreaName": "Луцкий район",
+                        "Locality": {
+                          "LocalityName": "Луцк",
+                          "Thoroughfare": {
+                            "ThoroughfareName": "Приветная улица",
+                            "Premise": {
+                              "PremiseNumber": "3"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "name": "Приветная улица, 3",
+            "description": "Луцк, Волынская область, Украина",
+            "boundedBy": {
+              "Envelope": {
+                "lowerCorner": "25.367489 50.724558",
+                "upperCorner": "25.3757 50.729769"
+              }
+            },
+            "Point": {
+              "pos": "25.371595 50.727164"
             }
           }
         }

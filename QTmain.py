@@ -15,6 +15,8 @@ class MyWidget(QMainWindow):
         self.pushButton_2.clicked.connect(self.type_map)
         self.pushButton_3.clicked.connect(self.type_map)
         self.pushButton_4.clicked.connect(self.type_map)
+        self.pushButton_5.clicked.connect(self.reset)
+        self.pushButton_6.clicked.connect(self.switch)
         print(1)
         self.size = size
         self.marker = False
@@ -22,6 +24,16 @@ class MyWidget(QMainWindow):
         self.delta = delta
         self.mod = mod
         self.get_zapros()
+
+    def reset(self):
+        self.textBrowser.setText('')
+        qtfunc.pt = ''
+        self.get_zapros()
+
+    def switch(self):
+        qtfunc.flag = not qtfunc.flag
+        self.find_toponim()
+
 
     def find_toponim(self):
         text = self.lineEdit.text()

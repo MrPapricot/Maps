@@ -5,6 +5,7 @@ import pygame
 import requests
 
 pt = ''
+flag = False
 
 
 def createMap(x, y, z, l):
@@ -35,7 +36,7 @@ def createMap(x, y, z, l):
 def find_toponim(adress):
     geocoder_request = f"http://geocode-maps.yandex.ru/1.x/?apikey=40d1649f-0493-4b70-98ba-98533de7710b&geocode={adress}&format=json"
 
-    global pt
+    global pt, flag
     # Выполняем запрос.
     response = requests.get(geocoder_request)
     if response:
@@ -47,6 +48,11 @@ def find_toponim(adress):
         toponym = json_response["response"]["GeoObjectCollection"]["featureMember"][0]["GeoObject"]
         # Полный адрес топонима:
         toponym_address = toponym["metaDataProperty"]["GeocoderMetaData"]["text"]
+        if flag:
+            try:
+                toponym_address += ', ' + toponym["metaDataProperty"]["GeocoderMetaData"]["Address"]["postal_code"]
+            except BaseException:
+                toponym_address += ', почтовый индекс не найден'
         # Координаты центра топонима:
         toponym_coodrinates = toponym["Point"]["pos"]
         # Печатаем извлечённые из ответа поля:
