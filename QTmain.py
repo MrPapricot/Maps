@@ -17,7 +17,6 @@ class MyWidget(QMainWindow):
         self.pushButton_4.clicked.connect(self.type_map)
         self.pushButton_5.clicked.connect(self.reset)
         self.pushButton_6.clicked.connect(self.switch)
-        print(1)
         self.size = size
         self.x, self.y = x, y
         self.delta = delta
@@ -47,7 +46,6 @@ class MyWidget(QMainWindow):
         self.label.setPixmap(QPixmap(qtfunc.createMap(self.x, self.y, self.size, self.mod)))
 
     def keyPressEvent(self, event):
-        print(event.key())
         if event.key() == Qt.Key_PageUp:
             self.size += 1
             self.size %= 18
